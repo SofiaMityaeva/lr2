@@ -1,0 +1,8 @@
+# For documentation generation
+mkdocs>=1.4
+mkdocstrings>=0.23
+mkdocstrings-python>=1.0
+
+# For running tests
+pytest>=7.0
+pytest-cov>=4.0
