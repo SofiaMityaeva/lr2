@@ -1,5 +1,8 @@
 # Contact Management Application
 
+[![CI/CD status](https://github.com/SofiaMityaeva/lr2/actions/workflows/main.yml/badge.svg)](https://github.com/SofiaMityaeva/lr2/actions/workflows/main.yml)
+[![Generated docs](https://github.com/SofiaMityaeva/lr2/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/SofiaMityaeva/lr2/actions/workflows/pages/pages-build-deployment)
+
 A simple Python-based contact management system that allows you to store, manage, and search contacts. The application is built with clean code practices and includes a comprehensive test suite using `pytest`.
 
 ---
