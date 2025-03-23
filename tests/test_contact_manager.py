@@ -46,3 +46,30 @@ def test_list_all_contacts(manager):
     manager.add_contact(contact)
     assert len(manager.list_all_contacts()) == 1
     assert contact in manager.list_all_contacts()
+
+def test_add_multiple_contacts(manager):
+    contact1 = Contact("Alice", "111-1111", "alice@example.com")
+    contact2 = Contact("Bob", "222-2222", "bob@example.com")
+    
+    manager.add_contact(contact1)
+    manager.add_contact(contact2)
+    
+    assert len(manager.list_all_contacts()) == 2
+    assert contact1 in manager.list_all_contacts()
+    assert contact2 in manager.list_all_contacts()
+
+def test_find_by_name_case_insensitive(manager):
+    contact = Contact("Alice", "111-1111", "alice@example.com")
+    manager.add_contact(contact)
+    
+    results = manager.find_by_name("alice")
+    assert len(results) == 1
+    assert contact in results
+
+def test_find_by_name_partial_match(manager):
+    contact = Contact("Alice Wonderland", "111-1111", "alice@example.com")
+    manager.add_contact(contact)
+    
+    results = manager.find_by_name("Alice")
+    assert len(results) == 1
+    assert contact in results
