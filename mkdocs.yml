@@ -1,0 +1,10 @@
+site_name: Contacts App Docs
+nav:
+  - Home: index.md
+theme: readthedocs
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            filters: ["!^_"]
